@@ -13,11 +13,11 @@ spec:
             app: frontend
       spec:
         containers:
-          - name: nginx contianer from docker hub
+          - name: nginx
             image: nginx
  selector:
    matchLabels:
-    app : backend
+    app : backefrontendnd
  replicas: 3 
 
       
