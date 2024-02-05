@@ -17,7 +17,7 @@ spec:
             image: nginx
  selector:
    matchLabels:
-    app : backefrontendnd
+    app : frontend
  replicas: 3 
 
       
