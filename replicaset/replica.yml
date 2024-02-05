@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+   name : ReplicaSet
+   labels:
+     app : backend
+     description:  testingreplicaset
+spec:
+ template:
+      metadata:
+        name:  first pod
+        labels:
+            app: frontend
+      spec:
+        containers:
+          - name: nginx contianer from docker hub
+            image: nginx
+ selector:
+   matchLabels:
+    app : backend
+ replicas: 3 
+
+      
