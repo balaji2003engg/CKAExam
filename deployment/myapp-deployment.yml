@@ -8,13 +8,13 @@ spec:
    template: 
       metadata: 
        name : myapp-pod
-       labels:
+       labels: 
          app : backend
-   spec:
-     containers:
-       - name : nginx
-         image: nginx
-   replicas : 3       
+      spec:
+        containers:
+           - name : nginximage
+             image: nginx   
    selector:
      matchLabels:
         app: backend
+   replicas : 3          
