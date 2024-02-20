@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: deployment-clusterip
   labels: 
     app : backend
 spec:
@@ -9,12 +9,12 @@ spec:
       metadata: 
        name : myapp-pod
        labels: 
-         app : backend
+         app : nginxclusterip
       spec:
         containers:
            - name : nginximage
              image: nginx   
    selector:
      matchLabels:
-        app: backend
+        app: nginxclusterip
    replicas : 2     

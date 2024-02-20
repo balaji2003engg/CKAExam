@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: deployment-ib
   labels: 
     app : backend
 spec:
@@ -9,12 +9,12 @@ spec:
       metadata: 
        name : myapp-pod
        labels: 
-         app : backend
+         app : nginxlb
       spec:
         containers:
            - name : nginximage
              image: nginx   
    selector:
      matchLabels:
-        app: backend
+        app: nginxlb
    replicas : 2     
